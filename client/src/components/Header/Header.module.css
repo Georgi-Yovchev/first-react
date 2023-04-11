@@ -1,0 +1,50 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+
+.one {
+  background: #ccc;
+}
+
+
+.one ul {
+  text-align: center;
+}
+
+.one ul {
+  list-style: none;
+}
+
+.one ul li {
+  display: inline;
+}
+
+.one ul li a {
+  color: #222;
+  text-decoration: none;
+  text-transform: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.one ul li a {
+  padding: 40px;
+  display: inline-block;
+}
+
+.one ul li a:hover {
+  background: #222;
+  color: #ccc;
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  text-shadow: 0 0 10px #ccc;
+}
