@@ -1,0 +1,16 @@
+.home {
+    background:red;
+    position:absolute;
+    top:98px;
+    right:0px;
+    bottom:32px;
+    left:0px;
+    font-size: 200%;
+    padding-left: 10%;
+    padding-right: 50%;
+    background-image: url("../../../public/homeBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
