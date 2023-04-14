@@ -4,12 +4,12 @@
     box-sizing: border-box;
   }
   
-  .create-section {
+  .register-section {
     height: 966px;
     padding: 50px;
   }
   
-  .create-car{
+  .register{
     background:#FEAD3A;
     background-image: url("../../../public/generalBackground.png");
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
   
   
   
-  .create-form form {
+  .register-form form {
     max-width: 300px;
     margin: 10px auto;
     padding: 10px 20px;
@@ -26,12 +26,12 @@
     border-radius: 8px;
   }
   
-  .create-form h1 {
+  .register-form h1 {
     margin: 0 0 30px 0;
     text-align: center;
   }
   
-  .create-form input
+  .register-form input
   /* input[type="text"],
   input[type="password"],
   input[type="date"],
@@ -70,7 +70,7 @@
     border-radius: 2px;
   } */
   
-  .create-form button {
+  .register-form button {
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #4bc970;
@@ -85,17 +85,17 @@
     margin-bottom: 10px;
   }
   
-  .create-form fieldset {
+  .register-form fieldset {
     margin-bottom: 30px;
     border: none;
   }
   
-  .create-form label {
+  .register-form label {
     display: block;
     margin-bottom: 8px;
   }
   
-  .create-form label.light {
+  .register-form label.light {
     font-weight: 300;
     display: inline;
   }
@@ -103,7 +103,7 @@
   
   @media screen and (min-width: 480px) {
   
-    .create-form form {
+    .register-form form {
       max-width: 480px;
     }
   
