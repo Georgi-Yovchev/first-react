@@ -7,6 +7,7 @@ export const useLocalStorage = (key, defaultValue) => {
         try {
             return JSON.parse(localStorageItem);
         } catch (err) {
+            console.log(err);
             return defaultValue;
         }
     });
