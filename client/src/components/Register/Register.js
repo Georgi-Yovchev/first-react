@@ -1,6 +1,6 @@
-import styles from "./CreateCar.module.css";
+import styles from "./Register.module.css";
 
-export const CreateCar = () => {
+export const Register = () => {
     return (
         <main className={styles["create-car"]}>
             <section className={styles["create-section"]}>

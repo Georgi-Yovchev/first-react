@@ -18,7 +18,10 @@ export const Header = () => {
                     <Link to="/cars/create">Create</Link>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <Link to="/login">Login</Link>
+                </li>
+                <li>
+                    <Link to="/register">register</Link>
                 </li>
             </ul>
         </nav>
