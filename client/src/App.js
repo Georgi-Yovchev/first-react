@@ -9,8 +9,8 @@ import { Login } from "./components/Login/Login";
 
 function App() {
     return (
-        <AuthProvider>
-            <Router>
+        <Router>
+            <AuthProvider>
                 <Header />
 
                 <Routes>
@@ -21,8 +21,8 @@ function App() {
                 </Routes>
 
                 <Footer />
-            </Router>
-        </AuthProvider>
+            </AuthProvider>
+        </Router>
     );
 }
 
