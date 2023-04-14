@@ -1,32 +1,22 @@
+import styles from "./CatalogList.module.css";
 // import { Link } from "react-router-dom";
 
 export const CatalogList = () => {
     return (
         <>
-            <div className="listing-section">
-                <div className="product">
-                    <div className="image-box">
-                        <div className="images" id="image-1" />
+            <div className={styles["listing-section"]}>
+                <div className={styles["product"]}>
+                    <div className={styles["image-box"]}>
+                        <div className={styles["images"]} id="image-1" />
                     </div>
-                    <div className="text-box">
+                    <div className={styles["text-box"]}>
                         <h2 className="item">Orange</h2>
                         <h3 className="price">$4.99</h3>
                         <p className="description">
                             A bag of delicious oranges!
                         </p>
-                        <label htmlFor="item-1-quantity">Quantity:</label>
-                        <input
-                            type="text"
-                            name="item-1-quantity"
-                            id="item-1-quantity"
-                            defaultValue={1}
-                        />
-                        <button
-                            type="button"
-                            name="item-1-button"
-                            id="item-1-button"
-                        >
-                            Add to Cart
+                        <button type="button" name="item-1-button">
+                            Details
                         </button>
                     </div>
                 </div>
