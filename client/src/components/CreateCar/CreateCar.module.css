@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+.create-section {
+  height: 966px;
+  padding: 50px;
+}
+
+.create-car{
+  background:#FEAD3A;
+  background-image: url("../../../public/generalBackground.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
 .create-form form {
   max-width: 300px;
   margin: 10px auto;
