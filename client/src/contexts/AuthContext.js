@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
         await AuthService.post("/users/register", values);
     };
     const onLoginSubmit = async (values) => {
+        console.log(values);
         const token = await AuthService.post("/users/login", values);
         console.log(token);
     };
