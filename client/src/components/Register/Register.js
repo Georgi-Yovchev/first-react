@@ -4,7 +4,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { useForm } from "../../hooks/useForm";
 
 export const Register = () => {
-    const { onRegisterSubmit } = useContext(AuthContext);
+    const { onRegisterSubmit, auth } = useContext(AuthContext);
     const { values, changeHandler, onSubmit } = useForm(
         {
             email: "",
@@ -13,7 +13,7 @@ export const Register = () => {
         },
         onRegisterSubmit
     );
-
+    console.log(auth);
     return (
         <main className={styles["register"]}>
             <section className={styles["register-section"]}>
