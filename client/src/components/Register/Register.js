@@ -7,13 +7,12 @@ export const Register = () => {
     const { onRegisterSubmit, auth } = useContext(AuthContext);
     const { values, changeHandler, onSubmit } = useForm(
         {
-            email: "",
+            username: "",
             password: "",
-            confirmPassword: "",
+            repassword: "",
         },
         onRegisterSubmit
     );
-    console.log(auth);
     return (
         <main className={styles["register"]}>
             <section className={styles["register-section"]}>

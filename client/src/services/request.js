@@ -1,6 +1,6 @@
 const host = "http://localhost:3030";
 
-async function request(method, url, data, auth) {
+async function request(method, url, data, auth = {}) {
     const options = {
         method,
         headers: {},

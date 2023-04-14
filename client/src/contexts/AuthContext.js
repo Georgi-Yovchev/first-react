@@ -7,14 +7,21 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useLocalStorage("auth", {});
 
-    const onRegisterSubmit = async (values) => {
-        await AuthService.post("/users/register", values);
-    };
     const onLoginSubmit = async (values) => {
         const result = await AuthService.post("/users/login", values);
         setAuth(result);
-        console.log(auth);
     };
+
+    const onRegisterSubmit = async (values) => {
+        const { username, password, repassword } = values;
+        if (password !== repassword) {
+            return console.log("passwords missmatch");
+        }
+
+        await AuthService.post("/users/register", { username, password });
+        onLoginSubmit(values);
+    };
+
     const contextValues = { onRegisterSubmit, onLoginSubmit, auth };
 
     return (
