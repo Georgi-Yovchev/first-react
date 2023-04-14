@@ -1,6 +1,6 @@
 const host = "http://localhost:3030";
 
-async function request(method, url, data) {
+async function request(method, url, data, auth) {
     const options = {
         method,
         headers: {},
@@ -11,7 +11,12 @@ async function request(method, url, data) {
         options.body = JSON.stringify(data);
     }
 
-    if (sessionStorage.userid) {
+    const isAuth = false;
+    if (Object.keys(auth).length > 0) {
+        isAuth = true;
+    }
+
+    if (isAuth) {
         options.headers["X-Authorization"] = sessionStorage.accessToken;
     }
 
