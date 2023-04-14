@@ -1,5 +1,5 @@
 .home {
-    background:red;
+    background:#FEAD3A;
     position:absolute;
     top:98px;
     right:0px;
@@ -10,7 +10,7 @@
     padding-right: 50%;
     background-image: url("../../../public/homeBackground.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: contain;
+        
 }
 
