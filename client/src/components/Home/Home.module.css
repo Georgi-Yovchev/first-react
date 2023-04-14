@@ -6,11 +6,16 @@
     bottom:32px;
     left:0px;
     font-size: 200%;
-    padding-left: 10%;
+    padding-left: 6.5%;
     padding-right: 50%;
+    padding-top: 5%;
     background-image: url("../../../public/homeBackground.jpg");
     background-repeat: no-repeat;
     background-size: contain;
         
+}
+
+.home a {
+    padding-left: 12.5%;
 }
 

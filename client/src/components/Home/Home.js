@@ -5,11 +5,11 @@ export const Home = () => {
         <main className={styles["home"]}>
             <div>
                 <h1>
-                    RENT <br /> & <br /> RENT OUT <span>CARS</span>
+                    RENT <br /> & <br /> RENT OUT <br />
+                    CARS
                 </h1>
                 <p>
-                    Rent <strong>cars</strong> at the{" "}
-                    <strong>best price</strong>!
+                    Rent cars at the <strong>best price</strong>!
                 </p>
                 <a href="/games/catalog">RENT</a>
             </div>
