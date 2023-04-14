@@ -8,6 +8,8 @@ export const AuthProvider = ({ children }) => {
         console.log(values);
     };
 
+    const contextValues = { onRegisterSubmit };
+
     return (
         <>
             <AuthContext.Provider value={contextValues}>
