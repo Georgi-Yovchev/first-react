@@ -60,6 +60,8 @@
 
   
   .item, .price {
+    clear:left;
+    text-align: center;
     clear: left;
     width: 100%;
     text-align: center;

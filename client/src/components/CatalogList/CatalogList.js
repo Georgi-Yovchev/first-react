@@ -17,7 +17,13 @@ export const CatalogList = () => {
                 <div className={styles["text-box"]}>
                     <h2 className="item">Orange</h2>
                     <h3 className="price">$4.99</h3>
-                    <p className="description">A bag of delicious oranges!</p>
+                    <p className="description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Ab fugiat nesciunt dolor impedit iste odio
+                        aspernatur placeat vel perspiciatis itaque. In inventore
+                        numquam iure neque. Aliquam assumenda excepturi adipisci
+                        distinctio!
+                    </p>
                     <button type="button" name="item-1-button">
                         Details
                     </button>
