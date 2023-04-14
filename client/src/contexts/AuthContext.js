@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const onRegisterSubmit = async (values) => {
-        console.log(values);
+        await AuthService.post("/users/register", values);
     };
 
     const contextValues = { onRegisterSubmit };
