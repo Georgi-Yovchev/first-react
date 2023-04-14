@@ -1,3 +1,4 @@
+import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CreateCar } from "./components/CreateCar/CreateCar";
 import { Header } from "./components/Header/Header";
@@ -7,17 +8,19 @@ import { Register } from "./components/Register/Register";
 
 function App() {
     return (
-        <Router>
-            <Header />
-            <main>
+        <AuthProvider>
+            <Router>
+                <Header />
+
                 <Routes>
                     <Route path="/cars/create" element={<CreateCar />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
                 </Routes>
-            </main>
-            <Footer />
-        </Router>
+
+                <Footer />
+            </Router>
+        </AuthProvider>
     );
 }
 
