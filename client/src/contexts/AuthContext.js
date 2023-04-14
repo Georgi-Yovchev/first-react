@@ -7,8 +7,11 @@ export const AuthProvider = ({ children }) => {
     const onRegisterSubmit = async (values) => {
         await AuthService.post("/users/register", values);
     };
-
-    const contextValues = { onRegisterSubmit };
+    const onLoginSubmit = async (values) => {
+        const token = await AuthService.post("/users/login", values);
+        console.log(token);
+    };
+    const contextValues = { onRegisterSubmit, onLoginSubmit };
 
     return (
         <>
