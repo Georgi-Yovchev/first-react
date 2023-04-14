@@ -1,4 +1,5 @@
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
     return (
@@ -11,7 +12,7 @@ export const Home = () => {
                 <p>
                     Rent cars at the <strong>best price</strong>!
                 </p>
-                <a href="/games/catalog">RENT</a>
+                <Link to="/cars/catalog">RENT</Link>
             </div>
         </main>
     );
