@@ -1,19 +1,14 @@
 import styles from "./CatalogItem.module.css";
 import { Link } from "react-router-dom";
 
-export const CatalogItem = ({
+export const CatalogFavouriteItem = ({
     _id,
     brand,
     model,
     image,
     price,
     description,
-    carId,
 }) => {
-    let id = _id;
-    if (carId) {
-        id = carId;
-    }
     return (
         <div className={styles["product"]}>
             <div className={styles["image-box"]}>
@@ -30,7 +25,7 @@ export const CatalogItem = ({
                 </h2>
                 <h3>${price}</h3>
                 <p>{description}</p>
-                <Link to={`/catalog/${id}`}>
+                <Link to={`/catalog/${_id}`}>
                     <button type="button" className={styles["details-btn"]}>
                         Details
                     </button>

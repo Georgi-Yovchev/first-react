@@ -3,6 +3,7 @@ import { CatalogItem } from "./CatalogItem/CatalogItem";
 
 export const CatalogList = (props) => {
     const cars = Object.values(props);
+
     return (
         <section className={styles["listing-section"]}>
             {cars.map((x) => (

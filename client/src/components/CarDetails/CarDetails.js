@@ -21,7 +21,6 @@ export const CarDetails = () => {
         ]).then(([carValues, favouritesArray]) => {
             setCar(carValues);
             let found = false;
-            console.log(favouritesArray);
             if (favouritesArray) {
                 found = favouritesArray.find((x) => x._ownerId === userId);
             }
