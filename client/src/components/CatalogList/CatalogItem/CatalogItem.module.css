@@ -1,7 +1,7 @@
 
   .product {
     float: left;
-    width: 23%;
+    width: 20%;
     border-radius: 2%;
     margin: 1%;
   }
@@ -47,19 +47,19 @@
     padding: 1em;
   }
   
+  .text-box h2, .text-box h3 {
+    text-align: center;
+  }
 
-  
-  .item, .price {
-        clear:left;
-    text-align: center;
-    clear: left;
-    width: 100%;
-    text-align: center;
+  .text-box p {
+    height: 100px;
+    padding-bottom: 40px;
+    display:block;
+    width:365px;
+    word-wrap:break-word;
+
   }
   
-  .price {
-    color: Grey;
-  }
   
   .description, .details-btn {
     float: left;

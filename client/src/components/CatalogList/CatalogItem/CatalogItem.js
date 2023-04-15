@@ -20,11 +20,11 @@ export const CatalogItem = ({
                 />
             </div>
             <div className={styles["text-box"]}>
-                <h2 className="item">
+                <h2>
                     {brand}-{model}
                 </h2>
-                <h3 className="price">${price}</h3>
-                <p className="description">{description}</p>
+                <h3>${price}</h3>
+                <p>{description}</p>
                 <Link to={`/catalog/${_id}`}>
                     <button type="button" className={styles["details-btn"]}>
                         Details
