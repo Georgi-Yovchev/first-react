@@ -7,3 +7,9 @@ export const create = async (data, auth) => {
 
     return result;
 };
+
+export const getAll = async () => {
+    const result = await request.get(url);
+
+    return result;
+};

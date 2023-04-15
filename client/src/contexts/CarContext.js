@@ -10,18 +10,18 @@ export const CarProvider = ({ children }) => {
     const { auth } = useContext(AuthContext);
     const [cars, setCars] = useState([]);
 
-    // useEffect(() => {
-    //     carService.getAll()
-    //         .then(result => {
-    //             setGames(result)
-    //         })
-    // }, []);
+    useEffect(() => {
+        carService.getAll().then((result) => {
+            setCars(result);
+        });
+    }, []);
 
+    console.log(cars);
     const onCreateCarSubmit = async (data) => {
         const newCar = await carService.create(data, auth);
     };
 
-    const contextValues = { onCreateCarSubmit };
+    const contextValues = { cars, onCreateCarSubmit };
 
     return (
         <CarContext.Provider value={contextValues}>
