@@ -1,3 +1,5 @@
+import styles from "./CatalogItem.module.css";
+
 export const CatalogItem = ({
     _id,
     brand,

@@ -14,7 +14,7 @@ export const CatalogList = () => {
             {cars.map((x) => (
                 <CatalogItem key={x._id} {...x} />
             ))}
-            <div className={styles["product"]}>
+            {/* <div className={styles["product"]}>
                 <div className={styles["image-box"]}>
                     <div
                         className={styles["images"]}
@@ -37,7 +37,7 @@ export const CatalogList = () => {
                         Details
                     </button>
                 </div>
-            </div>
+            </div> */}
         </section>
         // </main>
     );
