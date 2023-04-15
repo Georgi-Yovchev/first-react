@@ -7,10 +7,11 @@ import { Home } from "./components/Home/Home";
 import { Footer } from "./components/Footer/Footer";
 import { Register } from "./components/Register/Register";
 import { Login } from "./components/Login/Login";
-import { CatalogList } from "./components/CatalogList/CatalogList";
 import { CarDetails } from "./components/CarDetails/CarDetails";
 import { Logout } from "./components/Logout/Logout";
 import { EditCar } from "./components/EditCar/EditCar";
+import { Catalog } from "./components/Catalog/Catalog";
+import { Favourites } from "./components/Favourites/Favourites";
 
 function App() {
     return (
@@ -22,7 +23,8 @@ function App() {
                     <Routes>
                         <Route path="/cars/create" element={<CreateCar />} />
                         <Route path="/" element={<Home />} />
-                        <Route path="/cars/catalog" element={<CatalogList />} />
+                        <Route path="/cars/catalog" element={<Catalog />} />
+                        <Route path="/favourites" element={<Favourites />} />
                         <Route
                             path="/catalog/:carId"
                             element={<CarDetails />}

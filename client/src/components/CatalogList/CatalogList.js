@@ -1,19 +1,13 @@
 import styles from "./CatalogList.module.css";
 import { CatalogItem } from "./CatalogItem/CatalogItem";
-// import { Link } from "react-router-dom";
 
-import { useContext } from "react";
-import { CarContext } from "../../contexts/CarContext";
-
-export const CatalogList = () => {
-    const { cars } = useContext(CarContext);
+export const CatalogList = (props) => {
+    const cars2 = Object.values(props);
     return (
-        // <main className={styles["catalogList"]}>
         <section className={styles["listing-section"]}>
-            {cars.map((x) => (
+            {cars2.map((x) => (
                 <CatalogItem key={x._id} {...x} />
             ))}
         </section>
-        // </main>
     );
 };

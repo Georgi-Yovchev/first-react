@@ -21,6 +21,9 @@ export const Header = () => {
                             <Link to="/cars/create">Create</Link>
                         </li>
                         <li>
+                            <Link to="/favourites">Favourites</Link>
+                        </li>
+                        <li>
                             <Link to="/logout">Logout</Link>
                         </li>
                     </>
