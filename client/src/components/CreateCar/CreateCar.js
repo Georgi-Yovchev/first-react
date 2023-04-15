@@ -7,23 +7,30 @@ export const CreateCar = () => {
                 <div className={styles["create-form"]}>
                     <div>
                         <form action="index.html" method="post">
-                            <h1> Sign Up </h1>
+                            <h1> Create new offer </h1>
                             <fieldset>
-                                <label htmlFor="name">Name:</label>
-                                <input type="text" id="name" name="user_name" />
-                                <label htmlFor="email">Email:</label>
+                                <label htmlFor="brand">Brand:</label>
+                                <input type="text" id="brand" name="brand" />
+                                <label htmlFor="model">Model:</label>
+                                <input type="text" id="model" name="model" />
+                                <label htmlFor="year">Year:</label>
+                                <input type="text" id="year" name="year" />
+                                <label htmlFor="engine">Engine:</label>
+                                <input type="text" id="engine" name="engine" />
+                                <label htmlFor="mileage">Mileage:</label>
                                 <input
-                                    type="email"
-                                    id="mail"
-                                    name="user_email"
-                                />
-                                <label htmlFor="password">Password:</label>
-                                <input
-                                    type="password"
-                                    id="password"
-                                    name="user_password"
+                                    type="text"
+                                    id="mileage"
+                                    name="mileage"
                                 />
                             </fieldset>
+                            <label htmlFor="description">Description:</label>
+                            <textarea
+                                name="description"
+                                id="description"
+                                cols="30"
+                                rows="10"
+                            ></textarea>
                             <button type="submit">Sign Up</button>
                         </form>
                     </div>

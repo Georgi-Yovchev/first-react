@@ -31,7 +31,7 @@
   text-align: center;
 }
 
-.create-form input
+.create-form input, .create-form textarea
 /* input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -51,7 +51,7 @@ select  */
   height: auto;
   margin: 0;
   outline: 0;
-  padding: 15px;
+  padding: 5px;
   width: 100%;
   background-color: #e8eeef;
   color: #8a97a0;
