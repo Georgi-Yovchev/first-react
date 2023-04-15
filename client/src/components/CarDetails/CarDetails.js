@@ -1,5 +1,5 @@
 import styles from "./CarDetails.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import * as carService from "../../services/carService";
 import { useContext } from "react";
@@ -78,7 +78,10 @@ export const CarDetails = () => {
                             </fieldset>
                             {isOwner && (
                                 <>
-                                    <button type="button">Edit</button>
+                                    <Link to={`/catalog/${car._id}/edit`}>
+                                        <button type="button">Edit</button>
+                                    </Link>
+
                                     <button
                                         type="button"
                                         onClick={onDeleteCarClick}
@@ -100,7 +103,7 @@ export const CarDetails = () => {
                                         rows="5"
                                         name="description"
                                     ></textarea>
-                                    <button type="submit">Sign Up</button>
+                                    <button type="submit">Send message</button>
                                 </form>
                             </div>
                         </div>

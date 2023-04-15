@@ -1,11 +1,14 @@
-import styles from "./CreateCar.module.css";
-import { useContext } from "react";
+import styles from "./EditCar.module.css";
 import { useForm } from "../../hooks/useForm";
+import { useParams } from "react-router-dom";
+import * as carService from "../../services/carService";
+import { useContext, useEffect } from "react";
 import { CarContext } from "../../contexts/CarContext";
 
-export const CreateCar = () => {
-    const { onCreateCarSubmit } = useContext(CarContext);
-    const { values, changeHandler, onSubmit } = useForm(
+export const EditCar = () => {
+    const { onEditCarSubmit } = useContext(CarContext);
+    const { carId } = useParams();
+    const { values, changeHandler, onSubmit, changeValues } = useForm(
         {
             brand: "",
             model: "",
@@ -16,15 +19,21 @@ export const CreateCar = () => {
             mileage: "",
             description: "",
         },
-        onCreateCarSubmit
+        onEditCarSubmit
     );
+
+    useEffect(() => {
+        carService.getOne(carId).then((result) => {
+            changeValues(result);
+        });
+    }, [carId]);
     return (
         <main className={styles["create-car"]}>
             <section className={styles["create-section"]}>
                 <div className={styles["create-form"]}>
                     <div>
                         <form method="post" onSubmit={onSubmit}>
-                            <h1> Rent out your car </h1>
+                            <h1> Edit information </h1>
                             <fieldset>
                                 <label htmlFor="brand">Brand:</label>
                                 <input
@@ -92,10 +101,10 @@ export const CreateCar = () => {
                                 value={values.description}
                                 onChange={changeHandler}
                             ></textarea>
-                            <button type="submit">Rent out car</button>
+                            <button type="submit">Edit</button>
                         </form>
                     </div>
-                </div>
+                </div>{" "}
             </section>
         </main>
     );

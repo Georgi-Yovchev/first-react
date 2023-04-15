@@ -10,6 +10,7 @@ import { Login } from "./components/Login/Login";
 import { CatalogList } from "./components/CatalogList/CatalogList";
 import { CarDetails } from "./components/CarDetails/CarDetails";
 import { Logout } from "./components/Logout/Logout";
+import { EditCar } from "./components/EditCar/EditCar";
 
 function App() {
     return (
@@ -25,6 +26,10 @@ function App() {
                         <Route
                             path="/catalog/:carId"
                             element={<CarDetails />}
+                        />
+                        <Route
+                            path="/catalog/:carId/edit"
+                            element={<EditCar />}
                         />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />

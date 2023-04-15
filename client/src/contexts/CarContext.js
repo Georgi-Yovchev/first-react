@@ -24,13 +24,24 @@ export const CarProvider = ({ children }) => {
         navigate("/cars/catalog");
     };
 
+    const onEditCarSubmit = async (data) => {
+        const newCar = await carService.create(data, auth);
+        setCars((state) => [...state, newCar]);
+        navigate("/cars/catalog");
+    };
+
     const onDeleteCar = async (carId) => {
         const result = await carService.del(carId, auth);
         setCars((state) => state.filter((x) => x._id !== carId));
         navigate("/cars/catalog");
     };
 
-    const contextValues = { cars, onCreateCarSubmit, onDeleteCar };
+    const contextValues = {
+        cars,
+        onCreateCarSubmit,
+        onDeleteCar,
+        onEditCarSubmit,
+    };
 
     return (
         <CarContext.Provider value={contextValues}>
