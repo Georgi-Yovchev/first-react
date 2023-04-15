@@ -1,4 +1,5 @@
 import styles from "./CatalogList.module.css";
+import { CatalogItem } from "./CatalogItem/CatalogItem";
 // import { Link } from "react-router-dom";
 
 import { useContext } from "react";
@@ -6,9 +7,13 @@ import { CarContext } from "../../contexts/CarContext";
 
 export const CatalogList = () => {
     const { cars } = useContext(CarContext);
+    console.log(cars);
     return (
         // <main className={styles["catalogList"]}>
         <section className={styles["listing-section"]}>
+            {cars.map((x) => (
+                <CatalogItem key={x._id} {...x} />
+            ))}
             <div className={styles["product"]}>
                 <div className={styles["image-box"]}>
                     <div

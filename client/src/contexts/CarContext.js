@@ -16,7 +16,6 @@ export const CarProvider = ({ children }) => {
         });
     }, []);
 
-    console.log(cars);
     const onCreateCarSubmit = async (data) => {
         const newCar = await carService.create(data, auth);
     };

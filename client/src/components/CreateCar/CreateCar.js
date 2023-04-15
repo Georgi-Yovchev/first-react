@@ -9,6 +9,7 @@ export const CreateCar = () => {
         {
             brand: "",
             model: "",
+            price: "",
             image: "",
             year: "",
             engine: "",
@@ -39,6 +40,14 @@ export const CreateCar = () => {
                                     id="model"
                                     name="model"
                                     value={values.model}
+                                    onChange={changeHandler}
+                                />
+                                <label htmlFor="price">Price:</label>
+                                <input
+                                    type="text"
+                                    id="price"
+                                    name="price"
+                                    value={values.price}
                                     onChange={changeHandler}
                                 />
                                 <label htmlFor="image">Image:</label>
