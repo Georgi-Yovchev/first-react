@@ -26,7 +26,8 @@ export const CarProvider = ({ children }) => {
 
     const onEditCarSubmit = async (data, carId) => {
         const updatedCar = await carService.update(carId, data, auth);
-        console.log(updatedCar);
+        const removedOldCar = cars.filter((x) => x._id !== carId);
+        setCars([...removedOldCar, updatedCar]);
         navigate("/cars/catalog");
     };
 
