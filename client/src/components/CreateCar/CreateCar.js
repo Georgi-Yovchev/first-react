@@ -7,7 +7,7 @@ export const CreateCar = () => {
                 <div className={styles["create-form"]}>
                     <div>
                         <form action="index.html" method="post">
-                            <h1> Create new offer </h1>
+                            <h1> Rent out your car </h1>
                             <fieldset>
                                 <label htmlFor="brand">Brand:</label>
                                 <input type="text" id="brand" name="brand" />

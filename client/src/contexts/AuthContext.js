@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import * as AuthService from "../services/request";
+import * as AuthService from "../services/AuthService";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const AuthContext = createContext();
@@ -10,8 +10,9 @@ export const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
 
     const onLoginSubmit = async (values) => {
-        const result = await AuthService.post("/users/login", values);
+        const result = await AuthService.login(values);
         setAuth(result);
+        navigate("/");
     };
 
     const onRegisterSubmit = async (values) => {
@@ -21,9 +22,8 @@ export const AuthProvider = ({ children }) => {
         }
 
         try {
-            await AuthService.post("/users/register", { username, password });
+            await AuthService.register(username, password);
             onLoginSubmit({ username, password });
-            navigate("/");
         } catch (error) {
             return console.log("There is a problem");
         }
