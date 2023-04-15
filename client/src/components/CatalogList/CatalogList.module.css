@@ -96,22 +96,22 @@
     margin-top: 1em;
   }
   
-  button {
+  .details-btn {
     padding: 2%;
     background-color: #dfd;
     border: none;
     border-radius: 2%;
   }
   
-  button:hover {
+  .details-btn:hover {
     bottom: 0.1em;
   }
   
-  button:focus {
+  .details-btn:focus {
     outline: 0;
   }
   
-  button:active {
+  .details-btn:active {
     bottom: 0;
     background-color: #fdf;
   }
