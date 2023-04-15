@@ -24,3 +24,9 @@ export const del = async (carId, auth) => {
 
     return result;
 };
+
+export const update = async (carId, auth) => {
+    const result = await request.put(`${url}/${carId}`, undefined, auth);
+
+    return result;
+};

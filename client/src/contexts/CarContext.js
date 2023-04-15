@@ -25,8 +25,8 @@ export const CarProvider = ({ children }) => {
     };
 
     const onEditCarSubmit = async (data) => {
-        const newCar = await carService.create(data, auth);
-        setCars((state) => [...state, newCar]);
+        const updatedCar = await carService.update(data, auth);
+        console.log(updatedCar);
         navigate("/cars/catalog");
     };
 
