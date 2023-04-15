@@ -10,7 +10,7 @@ import { CarContext } from "../../contexts/CarContext";
 export const CarDetails = () => {
     const { userId, isAuthenticated, auth, username } = useContext(AuthContext);
     const { onDeleteCar } = useContext(CarContext);
-    const [car, setCar] = useState({});
+    const [car, setCar] = useState([]);
     const [isFavourited, setFavourite] = useState(false);
     const { carId } = useParams();
 
@@ -42,7 +42,7 @@ export const CarDetails = () => {
     };
 
     const onFavouriteClick = async () => {
-        const result = await favouriteService.create(username, carId, auth);
+        const result = await favouriteService.create(car, auth);
         setFavourite(true);
     };
 
