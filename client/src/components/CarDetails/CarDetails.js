@@ -2,9 +2,9 @@ import styles from "./CarDetails.module.css";
 
 export const CarDetails = () => {
     return (
-        <main className={styles["create-car"]}>
-            <section className={styles["create-section"]}>
-                <div className={styles["create-form"]}>
+        <main className={styles["car-details"]}>
+            <section className={styles["details-section"]}>
+                <div className={styles["float-container"]}>
                     <div className={styles["float"]}>
                         <img
                             className={styles["image"]}
@@ -14,7 +14,7 @@ export const CarDetails = () => {
                     </div>
 
                     <div className={styles["float"]}>
-                        <form method="post">
+                        <div className={styles["box"]}>
                             <h1> Rent out your car </h1>
                             <fieldset>
                                 <label htmlFor="brand">Brand:</label>
@@ -44,7 +44,7 @@ export const CarDetails = () => {
                                 name="description"
                             ></textarea>
                             <button type="submit">Sign Up</button>
-                        </form>
+                        </div>
                     </div>
                 </div>{" "}
             </section>
