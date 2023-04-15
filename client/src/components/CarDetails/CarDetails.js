@@ -15,34 +15,35 @@ export const CarDetails = () => {
 
                     <div className={styles["float"]}>
                         <div className={styles["box"]}>
-                            <h1> Rent out your car </h1>
+                            <h1> Details </h1>
                             <fieldset>
                                 <label htmlFor="brand">Brand:</label>
-                                <input type="text" id="brand" name="brand" />
-                                <label htmlFor="model">Model:</label>
-                                <input type="text" id="model" name="model" />
-                                <label htmlFor="price">Price:</label>
-                                <input type="text" id="price" name="price" />
-                                <label htmlFor="image">Image:</label>
-                                <input type="text" id="image" name="image" />
-                                <label htmlFor="year">Year:</label>
-                                <input type="text" id="year" name="year" />
-                                <label htmlFor="engine">Engine:</label>
-                                <input type="text" id="engine" name="engine" />
-                                <label htmlFor="mileage">Mileage:</label>
-                                <input
-                                    type="text"
-                                    id="mileage"
-                                    name="mileage"
-                                />
+                                <span>test brand</span>
+                                <label htmlFor="model">
+                                    <strong></strong>strongModel:
+                                </label>
+                                <span>test model</span>
+                                <label htmlFor="price">
+                                    <strong></strong>Price:
+                                </label>
+                                <span>test price</span>
+                                <label htmlFor="year">
+                                    <strong></strong>Year:
+                                </label>
+                                <span>test year</span>
+                                <label htmlFor="engine">
+                                    <strong></strong>Engine:
+                                </label>
+                                <span>test engine</span>
+                                <label htmlFor="mileage">
+                                    <strong></strong>Mileage:
+                                </label>
+                                <span>
+                                    testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                </span>
                             </fieldset>
                             <label htmlFor="description">Description:</label>
-                            <textarea
-                                id="description"
-                                cols="30"
-                                rows="5"
-                                name="description"
-                            ></textarea>
+
                             <button type="submit">Sign Up</button>
                         </div>
                     </div>

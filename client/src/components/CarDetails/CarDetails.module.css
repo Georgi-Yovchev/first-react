@@ -25,9 +25,14 @@
   padding: 20px;
 }
 
+.box span{
+  display:block;
+  width:445px;
+  word-wrap:break-word;
+}
 
 .box {
-  max-width: 480px;
+  width: 480px;
   margin: 10px auto;
   padding: 10px 20px;
   background: #f4f7f8;
