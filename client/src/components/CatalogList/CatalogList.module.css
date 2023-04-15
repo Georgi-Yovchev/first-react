@@ -60,7 +60,7 @@
 
   
   .item, .price {
-    clear:left;
+        clear:left;
     text-align: center;
     clear: left;
     width: 100%;
@@ -71,7 +71,7 @@
     color: Grey;
   }
   
-  .description, label, button, input {
+  .description, .details-btn {
     float: left;
     clear: left;
     width: 100%;

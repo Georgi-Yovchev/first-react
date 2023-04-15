@@ -24,7 +24,7 @@ export const CatalogList = () => {
                         numquam iure neque. Aliquam assumenda excepturi adipisci
                         distinctio!
                     </p>
-                    <button type="button" name="item-1-button">
+                    <button type="button" className={styles["details-btn"]}>
                         Details
                     </button>
                 </div>
