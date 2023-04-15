@@ -33,7 +33,6 @@ export const AuthProvider = ({ children }) => {
         const result = await AuthService.logout(auth);
         setAuth({});
         localStorage.removeItem("auth");
-        console.log(result);
         navigate("/");
     };
 
