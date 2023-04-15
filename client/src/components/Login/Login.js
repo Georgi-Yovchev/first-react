@@ -7,9 +7,8 @@ export const Login = () => {
     const { onLoginSubmit } = useContext(AuthContext);
     const { values, changeHandler, onSubmit } = useForm(
         {
-            email: "",
+            username: "",
             password: "",
-            confirmPassword: "",
         },
         onLoginSubmit
     );
