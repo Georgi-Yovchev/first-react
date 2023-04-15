@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
 
     const onLoginSubmit = async (values) => {
         const result = await AuthService.login(values);
+        delete result.password;
         setAuth(result);
         navigate("/");
     };

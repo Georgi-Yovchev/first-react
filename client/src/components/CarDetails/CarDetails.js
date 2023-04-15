@@ -90,24 +90,16 @@ export const CarDetails = () => {
                                     </button>
                                 </>
                             )}
+                            {!isOwner && isAuthenticated && (
+                                <button
+                                    type="button"
+                                    onClick={onDeleteCarClick}
+                                >
+                                    Add to favourites
+                                </button>
+                            )}
                         </div>
                     </div>
-
-                    {!isOwner && isAuthenticated && (
-                        <div className={styles["float"]}>
-                            <div className={styles["box"]}>
-                                <form method="post">
-                                    <textarea
-                                        id="description"
-                                        cols="30"
-                                        rows="5"
-                                        name="description"
-                                    ></textarea>
-                                    <button type="submit">Send message</button>
-                                </form>
-                            </div>
-                        </div>
-                    )}
                 </div>
             </section>
         </main>
