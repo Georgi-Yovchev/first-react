@@ -2,12 +2,13 @@ import styles from "./CarDetails.module.css";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import * as carService from "../../services/carService";
+import * as favouriteService from "../../services/favouriteService";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { CarContext } from "../../contexts/CarContext";
 
 export const CarDetails = () => {
-    const { userId, isAuthenticated } = useContext(AuthContext);
+    const { userId, isAuthenticated, auth, username } = useContext(AuthContext);
     const { onDeleteCar } = useContext(CarContext);
     const [car, setCar] = useState({});
     const { carId } = useParams();
@@ -31,6 +32,12 @@ export const CarDetails = () => {
             onDeleteCar(carId);
         }
     };
+
+    const onFavouriteClick = async () => {
+        const result = await favouriteService.create(username, auth);
+        console.log(result);
+    };
+
     return (
         <main className={styles["car-details"]}>
             <section className={styles["details-section"]}>
@@ -93,7 +100,7 @@ export const CarDetails = () => {
                             {!isOwner && isAuthenticated && (
                                 <button
                                     type="button"
-                                    onClick={onDeleteCarClick}
+                                    onClick={onFavouriteClick}
                                 >
                                     Add to favourites
                                 </button>

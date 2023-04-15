@@ -43,6 +43,7 @@ export const AuthProvider = ({ children }) => {
         onLogout,
         auth,
         userId: auth._id,
+        username: auth.username,
         isAuthenticated: !!auth.accessToken,
     };
 
