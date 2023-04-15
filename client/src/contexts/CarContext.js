@@ -24,8 +24,8 @@ export const CarProvider = ({ children }) => {
         navigate("/cars/catalog");
     };
 
-    const onEditCarSubmit = async (data) => {
-        const updatedCar = await carService.update(data, auth);
+    const onEditCarSubmit = async (data, carId) => {
+        const updatedCar = await carService.update(carId, data, auth);
         console.log(updatedCar);
         navigate("/cars/catalog");
     };

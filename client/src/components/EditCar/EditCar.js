@@ -19,7 +19,8 @@ export const EditCar = () => {
             mileage: "",
             description: "",
         },
-        onEditCarSubmit
+        onEditCarSubmit,
+        carId
     );
 
     useEffect(() => {
