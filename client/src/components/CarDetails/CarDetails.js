@@ -58,6 +58,8 @@ export const CarDetails = () => {
                                 </label>
                                 <span>{car.description}</span>
                             </fieldset>
+                            <button type="submit">Edit</button>
+                            <button type="submit">Delete</button>
                         </div>
                     </div>
                     <div className={styles["float"]}>
