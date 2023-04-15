@@ -29,7 +29,13 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const contextValues = { onRegisterSubmit, onLoginSubmit, auth };
+    const contextValues = {
+        onRegisterSubmit,
+        onLoginSubmit,
+        auth,
+        userId: auth._id,
+        isAuthenticated: !!auth.accessToken,
+    };
 
     return (
         <>
