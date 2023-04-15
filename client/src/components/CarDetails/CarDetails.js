@@ -20,8 +20,8 @@ export const CarDetails = () => {
                     <div className={styles["float"]}>
                         <img
                             className={styles["image"]}
-                            src="https://editorial.pxcrush.net/carsales/general/editorial/my22-ford-mustang-gt-03.jpg?width=1024&height=683"
-                            alt=""
+                            src={car.image}
+                            alt="could not laod image"
                         />
                     </div>
 

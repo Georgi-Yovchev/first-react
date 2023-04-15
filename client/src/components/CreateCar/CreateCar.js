@@ -92,7 +92,7 @@ export const CreateCar = () => {
                                 value={values.description}
                                 onChange={changeHandler}
                             ></textarea>
-                            <button type="submit">Sign Up</button>
+                            <button type="submit">Rent out car</button>
                         </form>
                     </div>
                 </div>{" "}
