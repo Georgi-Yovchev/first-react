@@ -20,7 +20,12 @@ export const CarDetails = () => {
             favouriteService.checkByCarId(carId),
         ]).then(([carValues, favouritesArray]) => {
             setCar(carValues);
-            const found = favouritesArray.find((x) => x._ownerId === userId);
+            let found = false;
+            console.log(favouritesArray);
+            if (favouritesArray) {
+                found = favouritesArray.find((x) => x._ownerId === userId);
+            }
+
             if (found) {
                 setFavourite(true);
             }
@@ -42,7 +47,7 @@ export const CarDetails = () => {
     };
 
     const onFavouriteClick = async () => {
-        const result = await favouriteService.create(car, auth);
+        const result = await favouriteService.create({ ...car, carId }, auth);
         setFavourite(true);
     };
 

@@ -7,13 +7,13 @@ import * as favouriteService from "../../services/favouriteService";
 
 export const Favourites = () => {
     const { userId, isAuthenticated, auth, username } = useContext(AuthContext);
-    const [favCar, setFavCar] = useState([]);
+    const [favCars, setFavCars] = useState([]);
 
     useEffect(() => {
         favouriteService.checkByUserId(userId).then((result) => {
-            setFavCar(result);
+            setFavCars(result);
         });
     }, []);
 
-    return <CatalogList {...favCar} />;
+    return <CatalogList {...favCars} />;
 };
