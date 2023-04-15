@@ -11,6 +11,8 @@ export const CarProvider = ({ children }) => {
     const { auth } = useContext(AuthContext);
     const [cars, setCars] = useState([]);
     const navigate = useNavigate();
+    console.log(`this is from carContext`);
+    console.log(cars);
 
     useEffect(() => {
         carService.getAll().then((result) => {
@@ -20,7 +22,11 @@ export const CarProvider = ({ children }) => {
 
     const onCreateCarSubmit = async (data) => {
         const newCar = await carService.create(data, auth);
-        setCars((state) => [...state, newCar]);
+
+        setCars((state) => {
+            console.log(cars);
+            return [...state, newCar];
+        });
         navigate("/cars/catalog");
     };
 
