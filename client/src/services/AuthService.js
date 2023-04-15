@@ -12,3 +12,8 @@ export const register = async (username, password) => {
     });
     return result;
 };
+
+export const logout = async (auth) => {
+    const result = await request.get("/users/logout", undefined, auth);
+    return result;
+};

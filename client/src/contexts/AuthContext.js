@@ -29,9 +29,18 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const onLogout = async () => {
+        const result = await AuthService.logout(auth);
+        setAuth({});
+        localStorage.removeItem("auth");
+        console.log(result);
+        navigate("/");
+    };
+
     const contextValues = {
         onRegisterSubmit,
         onLoginSubmit,
+        onLogout,
         auth,
         userId: auth._id,
         isAuthenticated: !!auth.accessToken,
