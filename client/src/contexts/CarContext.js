@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import * as carService from "../services/carService";
 
 import { useContext } from "react";
@@ -9,6 +10,7 @@ export const CarContext = createContext();
 export const CarProvider = ({ children }) => {
     const { auth } = useContext(AuthContext);
     const [cars, setCars] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         carService.getAll().then((result) => {
@@ -18,6 +20,8 @@ export const CarProvider = ({ children }) => {
 
     const onCreateCarSubmit = async (data) => {
         const newCar = await carService.create(data, auth);
+        setCars((state) => [...state, newCar]);
+        navigate("/cars/catalog");
     };
 
     const contextValues = { cars, onCreateCarSubmit };
