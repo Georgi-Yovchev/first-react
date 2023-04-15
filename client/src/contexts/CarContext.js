@@ -22,7 +22,6 @@ export const CarProvider = ({ children }) => {
         const newCar = await carService.create(data, auth);
 
         setCars((state) => {
-            console.log(cars);
             return [...state, newCar];
         });
         navigate("/cars/catalog");
