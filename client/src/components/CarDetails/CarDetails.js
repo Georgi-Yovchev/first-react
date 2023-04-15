@@ -11,11 +11,19 @@ export const CarDetails = () => {
     const { userId, isAuthenticated, auth, username } = useContext(AuthContext);
     const { onDeleteCar } = useContext(CarContext);
     const [car, setCar] = useState({});
+    const [isFavourited, setFavourite] = useState(false);
     const { carId } = useParams();
 
     useEffect(() => {
-        carService.getOne(carId).then((result) => {
-            setCar(result);
+        Promise.all([
+            carService.getOne(carId),
+            favouriteService.checkByCarId(carId),
+        ]).then(([carValues, favouritesArray]) => {
+            setCar(carValues);
+            const found = favouritesArray.find((x) => x._ownerId === userId);
+            if (found) {
+                setFavourite(true);
+            }
         });
     }, [carId]);
 
@@ -35,7 +43,7 @@ export const CarDetails = () => {
 
     const onFavouriteClick = async () => {
         const result = await favouriteService.create(username, carId, auth);
-        console.log(result);
+        setFavourite(true);
     };
 
     return (
@@ -97,7 +105,7 @@ export const CarDetails = () => {
                                     </button>
                                 </>
                             )}
-                            {!isOwner && isAuthenticated && (
+                            {!isOwner && isAuthenticated && !isFavourited && (
                                 <button
                                     type="button"
                                     onClick={onFavouriteClick}
