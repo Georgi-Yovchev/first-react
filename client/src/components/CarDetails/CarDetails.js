@@ -4,9 +4,11 @@ import { useState, useEffect } from "react";
 import * as carService from "../../services/carService";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { CarContext } from "../../contexts/CarContext";
 
 export const CarDetails = () => {
     const { userId, isAuthenticated } = useContext(AuthContext);
+    const { onDeleteCar } = useContext(CarContext);
     const [car, setCar] = useState({});
     const { carId } = useParams();
 
@@ -20,6 +22,10 @@ export const CarDetails = () => {
     if (userId === car._ownerId) {
         isOwner = true;
     }
+
+    const onDeleteCarClick = () => {
+        onDeleteCar(carId);
+    };
     return (
         <main className={styles["car-details"]}>
             <section className={styles["details-section"]}>
@@ -67,8 +73,13 @@ export const CarDetails = () => {
                             </fieldset>
                             {isOwner && (
                                 <>
-                                    <button type="submit">Edit</button>
-                                    <button type="submit">Delete</button>
+                                    <button type="button">Edit</button>
+                                    <button
+                                        type="button"
+                                        onClick={onDeleteCarClick}
+                                    >
+                                        Delete
+                                    </button>
                                 </>
                             )}
                         </div>

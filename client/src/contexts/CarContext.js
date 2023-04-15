@@ -24,13 +24,13 @@ export const CarProvider = ({ children }) => {
         navigate("/cars/catalog");
     };
 
-    const onDeleteCarClick = async (carId, auth) => {
+    const onDeleteCar = async (carId) => {
         const result = await carService.del(carId, auth);
         setCars((state) => state.filter((x) => x._id !== carId));
         navigate("/cars/catalog");
     };
 
-    const contextValues = { cars, onCreateCarSubmit };
+    const contextValues = { cars, onCreateCarSubmit, onDeleteCar };
 
     return (
         <CarContext.Provider value={contextValues}>
