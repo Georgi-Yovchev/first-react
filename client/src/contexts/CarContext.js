@@ -11,8 +11,6 @@ export const CarProvider = ({ children }) => {
     const { auth } = useContext(AuthContext);
     const [cars, setCars] = useState([]);
     const navigate = useNavigate();
-    console.log(`this is from carContext`);
-    console.log(cars);
 
     useEffect(() => {
         carService.getAll().then((result) => {

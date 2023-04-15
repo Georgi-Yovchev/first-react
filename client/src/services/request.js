@@ -24,8 +24,6 @@ async function request(method, url, data, auth = {}) {
         const response = await fetch(host + url, options);
 
         if (response.status == 204) {
-            console.log(`this is from request`);
-            console.log(response);
             return [];
         }
 
