@@ -18,3 +18,9 @@ export const getOne = async (carId) => {
     const result = await request.get(`${url}/${carId}`);
     return result;
 };
+
+export const del = async (carId, auth) => {
+    const result = await request.del(`${url}/${carId}`, undefined, auth);
+
+    return result;
+};
