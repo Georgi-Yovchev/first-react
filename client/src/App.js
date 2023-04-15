@@ -1,4 +1,5 @@
 import { AuthProvider } from "./contexts/AuthContext";
+import { CarProvider } from "./contexts/CarContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CreateCar } from "./components/CreateCar/CreateCar";
 import { Header } from "./components/Header/Header";
@@ -12,17 +13,19 @@ function App() {
     return (
         <Router>
             <AuthProvider>
-                <Header />
+                <CarProvider>
+                    <Header />
 
-                <Routes>
-                    <Route path="/cars/create" element={<CreateCar />} />
-                    <Route path="/" element={<Home />} />
-                    <Route path="/cars/catalog" element={<CatalogList />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                </Routes>
+                    <Routes>
+                        <Route path="/cars/create" element={<CreateCar />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/cars/catalog" element={<CatalogList />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                    </Routes>
 
-                <Footer />
+                    <Footer />
+                </CarProvider>
             </AuthProvider>
         </Router>
     );

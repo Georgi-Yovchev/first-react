@@ -18,11 +18,7 @@ export const Register = () => {
             <section className={styles["register-section"]}>
                 <div className={styles["register-form"]}>
                     <div>
-                        <form
-                            action="index.html"
-                            method="post"
-                            onSubmit={onSubmit}
-                        >
+                        <form method="post" onSubmit={onSubmit}>
                             <h1> Sign Up </h1>
                             <fieldset>
                                 <label htmlFor="username">Username:</label>

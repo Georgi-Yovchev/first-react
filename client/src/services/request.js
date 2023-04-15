@@ -11,13 +11,13 @@ async function request(method, url, data, auth = {}) {
         options.body = JSON.stringify(data);
     }
 
-    const isAuth = false;
+    let isAuth = false;
     if (Object.keys(auth).length > 0) {
         isAuth = true;
     }
 
     if (isAuth) {
-        options.headers["X-Authorization"] = sessionStorage.accessToken;
+        options.headers["X-Authorization"] = auth.accessToken;
     }
 
     try {
