@@ -13,3 +13,8 @@ export const getAll = async () => {
 
     return result;
 };
+
+export const getOne = async (carId) => {
+    const result = await request.get(`${url}/${carId}`);
+    return result;
+};

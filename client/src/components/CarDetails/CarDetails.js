@@ -1,9 +1,20 @@
 import styles from "./CarDetails.module.css";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import * as carService from "../../services/carService";
 
 export const CarDetails = () => {
+    const [car, setCar] = useState({});
     const { carId } = useParams();
     console.log(carId);
+
+    console.log(car);
+    useEffect(() => {
+        carService.getOne(carId).then((result) => {
+            setCar(result);
+        });
+    }, [carId]);
+
     return (
         <main className={styles["car-details"]}>
             <section className={styles["details-section"]}>
