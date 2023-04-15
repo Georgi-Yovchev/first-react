@@ -17,7 +17,7 @@
 }
 
 .image {
-  max-width: 1600px;
+  max-width: 900px;
 }
 
 .float {
@@ -29,12 +29,12 @@
   padding-bottom: 40px;
   display:block;
  
-  width:445px;
+  width:365px;
   word-wrap:break-word;
 }
 
 .box {
-  width: 480px;
+  width: 400px;
   margin: 10px auto;
   padding: 10px 20px;
   background: #f4f7f8;

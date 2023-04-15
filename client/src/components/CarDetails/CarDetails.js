@@ -43,16 +43,30 @@ export const CarDetails = () => {
                                 <label htmlFor="mileage">
                                     <strong>Mileage</strong>
                                 </label>
+                                <span>testa</span>
+                                <label htmlFor="description">
+                                    Description:
+                                </label>
                                 <span>
                                     testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                                 </span>
                             </fieldset>
-                            <label htmlFor="description">Description:</label>
-
-                            <button type="submit">Sign Up</button>
                         </div>
                     </div>
-                </div>{" "}
+                    <div className={styles["float"]}>
+                        <div className={styles["box"]}>
+                            <form method="post">
+                                <textarea
+                                    id="description"
+                                    cols="30"
+                                    rows="5"
+                                    name="description"
+                                ></textarea>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     );
