@@ -16,6 +16,14 @@
   background-size: contain;
 }
 
+.image {
+  max-width: 1600px;
+}
+
+.float {
+  float: left;
+  padding: 20px;
+}
 
 
 .create-form form {

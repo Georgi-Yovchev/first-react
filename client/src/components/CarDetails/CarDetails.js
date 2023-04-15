@@ -5,65 +5,35 @@ export const CarDetails = () => {
         <main className={styles["create-car"]}>
             <section className={styles["create-section"]}>
                 <div className={styles["create-form"]}>
-                    <div>
-                        <form method="post" onSubmit={onSubmit}>
+                    <div className={styles["float"]}>
+                        <img
+                            className={styles["image"]}
+                            src="https://editorial.pxcrush.net/carsales/general/editorial/my22-ford-mustang-gt-03.jpg?width=1024&height=683"
+                            alt=""
+                        />
+                    </div>
+
+                    <div className={styles["float"]}>
+                        <form method="post">
                             <h1> Rent out your car </h1>
                             <fieldset>
                                 <label htmlFor="brand">Brand:</label>
-                                <input
-                                    type="text"
-                                    id="brand"
-                                    name="brand"
-                                    value={values.brand}
-                                    onChange={changeHandler}
-                                />
+                                <input type="text" id="brand" name="brand" />
                                 <label htmlFor="model">Model:</label>
-                                <input
-                                    type="text"
-                                    id="model"
-                                    name="model"
-                                    value={values.model}
-                                    onChange={changeHandler}
-                                />
+                                <input type="text" id="model" name="model" />
                                 <label htmlFor="price">Price:</label>
-                                <input
-                                    type="text"
-                                    id="price"
-                                    name="price"
-                                    value={values.price}
-                                    onChange={changeHandler}
-                                />
+                                <input type="text" id="price" name="price" />
                                 <label htmlFor="image">Image:</label>
-                                <input
-                                    type="text"
-                                    id="image"
-                                    name="image"
-                                    value={values.image}
-                                    onChange={changeHandler}
-                                />
+                                <input type="text" id="image" name="image" />
                                 <label htmlFor="year">Year:</label>
-                                <input
-                                    type="text"
-                                    id="year"
-                                    name="year"
-                                    value={values.year}
-                                    onChange={changeHandler}
-                                />
+                                <input type="text" id="year" name="year" />
                                 <label htmlFor="engine">Engine:</label>
-                                <input
-                                    type="text"
-                                    id="engine"
-                                    name="engine"
-                                    value={values.engine}
-                                    onChange={changeHandler}
-                                />
+                                <input type="text" id="engine" name="engine" />
                                 <label htmlFor="mileage">Mileage:</label>
                                 <input
                                     type="text"
                                     id="mileage"
                                     name="mileage"
-                                    value={values.mileage}
-                                    onChange={changeHandler}
                                 />
                             </fieldset>
                             <label htmlFor="description">Description:</label>
@@ -72,8 +42,6 @@ export const CarDetails = () => {
                                 cols="30"
                                 rows="5"
                                 name="description"
-                                value={values.description}
-                                onChange={changeHandler}
                             ></textarea>
                             <button type="submit">Sign Up</button>
                         </form>

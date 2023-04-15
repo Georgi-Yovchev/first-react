@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Register } from "./components/Register/Register";
 import { Login } from "./components/Login/Login";
 import { CatalogList } from "./components/CatalogList/CatalogList";
+import { CarDetails } from "./components/CarDetails/CarDetails";
 
 function App() {
     return (
@@ -20,6 +21,10 @@ function App() {
                         <Route path="/cars/create" element={<CreateCar />} />
                         <Route path="/" element={<Home />} />
                         <Route path="/cars/catalog" element={<CatalogList />} />
+                        <Route
+                            path="/catalog/:carId"
+                            element={<CarDetails />}
+                        />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
                     </Routes>
