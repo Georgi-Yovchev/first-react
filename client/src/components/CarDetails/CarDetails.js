@@ -6,9 +6,7 @@ import * as carService from "../../services/carService";
 export const CarDetails = () => {
     const [car, setCar] = useState({});
     const { carId } = useParams();
-    console.log(carId);
 
-    console.log(car);
     useEffect(() => {
         carService.getOne(carId).then((result) => {
             setCar(result);
@@ -34,33 +32,31 @@ export const CarDetails = () => {
                                 <label htmlFor="brand">
                                     <strong>Brand</strong>
                                 </label>
-                                <span>test brand</span>
+                                <span>{car.brand}</span>
                                 <label htmlFor="model">
                                     <strong>Model</strong>
                                 </label>
-                                <span>test model</span>
+                                <span>{car.model}</span>
                                 <label htmlFor="price">
                                     <strong>Price</strong>
                                 </label>
-                                <span>test price</span>
+                                <span>{car.price}</span>
                                 <label htmlFor="year">
                                     <strong>Year</strong>
                                 </label>
-                                <span>test year</span>
+                                <span>{car.year}</span>
                                 <label htmlFor="engine">
                                     <strong>Engine</strong>
                                 </label>
-                                <span>test engine</span>
+                                <span>{car.engine}</span>
                                 <label htmlFor="mileage">
                                     <strong>Mileage</strong>
                                 </label>
-                                <span>testa</span>
+                                <span>{car.mileage}</span>
                                 <label htmlFor="description">
                                     Description:
                                 </label>
-                                <span>
-                                    testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                                </span>
+                                <span>{car.description}</span>
                             </fieldset>
                         </div>
                     </div>
