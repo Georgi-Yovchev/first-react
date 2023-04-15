@@ -2,8 +2,11 @@ import styles from "./CarDetails.module.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import * as carService from "../../services/carService";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const CarDetails = () => {
+    const { userId, isAuthenticated } = useContext(AuthContext);
     const [car, setCar] = useState({});
     const { carId } = useParams();
 
@@ -13,6 +16,10 @@ export const CarDetails = () => {
         });
     }, [carId]);
 
+    let isOwner = false;
+    if (userId === car._ownerId) {
+        isOwner = true;
+    }
     return (
         <main className={styles["car-details"]}>
             <section className={styles["details-section"]}>
@@ -58,23 +65,30 @@ export const CarDetails = () => {
                                 </label>
                                 <span>{car.description}</span>
                             </fieldset>
-                            <button type="submit">Edit</button>
-                            <button type="submit">Delete</button>
+                            {isOwner && (
+                                <>
+                                    <button type="submit">Edit</button>
+                                    <button type="submit">Delete</button>
+                                </>
+                            )}
                         </div>
                     </div>
-                    <div className={styles["float"]}>
-                        <div className={styles["box"]}>
-                            <form method="post">
-                                <textarea
-                                    id="description"
-                                    cols="30"
-                                    rows="5"
-                                    name="description"
-                                ></textarea>
-                                <button type="submit">Sign Up</button>
-                            </form>
+
+                    {!isOwner && isAuthenticated && (
+                        <div className={styles["float"]}>
+                            <div className={styles["box"]}>
+                                <form method="post">
+                                    <textarea
+                                        id="description"
+                                        cols="30"
+                                        rows="5"
+                                        name="description"
+                                    ></textarea>
+                                    <button type="submit">Sign Up</button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </div>
             </section>
         </main>
