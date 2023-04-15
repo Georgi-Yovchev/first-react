@@ -24,7 +24,12 @@ export const CarDetails = () => {
     }
 
     const onDeleteCarClick = () => {
-        onDeleteCar(carId);
+        const isConfirmed = window.confirm(
+            "Are yo usure you want to delete this item"
+        );
+        if (isConfirmed) {
+            onDeleteCar(carId);
+        }
     };
     return (
         <main className={styles["car-details"]}>
