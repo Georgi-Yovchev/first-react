@@ -34,7 +34,7 @@ export const CarDetails = () => {
     };
 
     const onFavouriteClick = async () => {
-        const result = await favouriteService.create(username, auth);
+        const result = await favouriteService.create(username, carId, auth);
         console.log(result);
     };
 
