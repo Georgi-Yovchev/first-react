@@ -1,6 +1,9 @@
 import styles from "./CarDetails.module.css";
+import { useParams } from "react-router-dom";
 
 export const CarDetails = () => {
+    const { carId } = useParams();
+    console.log(carId);
     return (
         <main className={styles["car-details"]}>
             <section className={styles["details-section"]}>
@@ -17,26 +20,28 @@ export const CarDetails = () => {
                         <div className={styles["box"]}>
                             <h1> Details </h1>
                             <fieldset>
-                                <label htmlFor="brand">Brand:</label>
+                                <label htmlFor="brand">
+                                    <strong>Brand</strong>
+                                </label>
                                 <span>test brand</span>
                                 <label htmlFor="model">
-                                    <strong></strong>strongModel:
+                                    <strong>Model</strong>
                                 </label>
                                 <span>test model</span>
                                 <label htmlFor="price">
-                                    <strong></strong>Price:
+                                    <strong>Price</strong>
                                 </label>
                                 <span>test price</span>
                                 <label htmlFor="year">
-                                    <strong></strong>Year:
+                                    <strong>Year</strong>
                                 </label>
                                 <span>test year</span>
                                 <label htmlFor="engine">
-                                    <strong></strong>Engine:
+                                    <strong>Engine</strong>
                                 </label>
                                 <span>test engine</span>
                                 <label htmlFor="mileage">
-                                    <strong></strong>Mileage:
+                                    <strong>Mileage</strong>
                                 </label>
                                 <span>
                                     testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
