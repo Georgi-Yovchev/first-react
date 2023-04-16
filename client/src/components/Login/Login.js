@@ -42,7 +42,12 @@ export const Login = () => {
                                     onChange={changeHandler}
                                 />
                             </fieldset>
-                            <button type="submit">Sign Up</button>
+                            <button
+                                type="submit"
+                                className={styles["submit-btn"]}
+                            >
+                                Sign Up
+                            </button>
                         </form>
                     </div>
                 </div>{" "}
