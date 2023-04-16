@@ -13,7 +13,7 @@ export const Header = () => {
                 </li>
 
                 <li>
-                    <Link to="/cars/catalog">Rent cars</Link>
+                    <Link to="/cars/catalog">Catalog</Link>
                 </li>
                 {isAuthenticated && (
                     <>
