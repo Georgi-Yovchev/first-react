@@ -1,7 +1,7 @@
-import styles from "./CatalogItem.module.css";
+import styles from "./Item.module.css";
 import { Link } from "react-router-dom";
 
-export const CatalogItem = ({
+export const Item = ({
     _id,
     brand,
     model,

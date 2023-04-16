@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { CarContext } from "../../contexts/CarContext";
-import { CatalogList } from "../CatalogList/CatalogList";
+import { List } from "../common/List/List";
 
 export const Catalog = () => {
     const { cars } = useContext(CarContext);
-    return <CatalogList {...cars} />;
+    return <List {...cars} />;
 };

@@ -1,5 +1,5 @@
 import { CarContext } from "../../contexts/CarContext";
-import { CatalogList } from "../CatalogList/CatalogList";
+import { List } from "../common/List/List";
 
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -15,5 +15,5 @@ export const Favourites = () => {
         });
     }, []);
 
-    return <CatalogList {...favCars} />;
+    return <List {...favCars} />;
 };
