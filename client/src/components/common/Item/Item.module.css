@@ -62,7 +62,7 @@
   }
   
   
-  .description, .details-btn {
+  .description, .item-btn {
     float: left;
     clear: left;
     width: 100%;
@@ -84,22 +84,23 @@
     margin-top: 1em;
   }
   
-  .details-btn {
+  .item-btn {
     padding: 2%;
     background-color: #dfd;
     border: none;
     border-radius: 2%;
   }
   
-  .details-btn:hover {
+  .item-btn:hover {
     bottom: 0.1em;
+    background-color: rgb(203, 98, 98);
   }
   
-  .details-btn:focus {
+  .item-btn:focus {
     outline: 0;
   }
   
-  .details-btn:active {
+  .item-btn:active {
     bottom: 0;
     background-color: #fdf;
   }

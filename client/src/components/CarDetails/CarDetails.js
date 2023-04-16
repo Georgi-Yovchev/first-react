@@ -102,11 +102,17 @@ export const CarDetails = () => {
                             {isOwner && (
                                 <>
                                     <Link to={`/catalog/${car._id}/edit`}>
-                                        <button type="button">Edit</button>
+                                        <button
+                                            type="button"
+                                            className={styles["item-btn"]}
+                                        >
+                                            Edit
+                                        </button>
                                     </Link>
 
                                     <button
                                         type="button"
+                                        className={styles["item-btn"]}
                                         onClick={onDeleteCarClick}
                                     >
                                         Delete
@@ -116,6 +122,7 @@ export const CarDetails = () => {
                             {!isOwner && isAuthenticated && !isFavourited && (
                                 <button
                                     type="button"
+                                    className={styles["item-btn"]}
                                     onClick={onFavouriteClick}
                                 >
                                     Add to favourites

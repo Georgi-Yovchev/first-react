@@ -115,3 +115,24 @@ input[type="checkbox"] {
   font-weight: 300;
   display: inline;
 }
+
+.item-btn {
+  padding: 2%;
+  background-color: #dfd;
+  border: none;
+  border-radius: 2%;
+}
+
+.item-btn:hover {
+  bottom: 0.1em;
+  background-color: rgb(203, 98, 98);
+}
+
+.item-btn:focus {
+  outline: 0;
+}
+
+.item-btn:active {
+  bottom: 0;
+  background-color: #fdf;
+}

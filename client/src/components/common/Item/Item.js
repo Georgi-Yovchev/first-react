@@ -36,7 +36,7 @@ export const Item = ({
                         : description}
                 </p>
                 <Link to={`/catalog/${id}`}>
-                    <button type="button" className={styles["details-btn"]}>
+                    <button type="button" className={styles["item-btn"]}>
                         Details
                     </button>
                 </Link>
