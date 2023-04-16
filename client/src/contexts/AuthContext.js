@@ -19,7 +19,19 @@ export const AuthProvider = ({ children }) => {
     const onRegisterSubmit = async (values) => {
         const { username, password, repassword } = values;
         if (password !== repassword) {
-            return console.log("passwords missmatch");
+            return window.alert("passwords missmatch");
+        }
+
+        if (username.length < 5) {
+            return window.alert(
+                "Your username should be atleast 5 characters long"
+            );
+        }
+
+        if (password.length < 4) {
+            return window.alert(
+                "Your password should be atleast 4 characters long"
+            );
         }
 
         try {
@@ -31,7 +43,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const onLogout = async () => {
-        const result = await AuthService.logout(auth);
+        await AuthService.logout(auth);
         setAuth({});
         localStorage.removeItem("auth");
         navigate("/");
