@@ -8,7 +8,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { CarContext } from "../../contexts/CarContext";
 
 export const CarDetails = () => {
-    const { userId, isAuthenticated, auth, username } = useContext(AuthContext);
+    const { userId, isAuthenticated, auth } = useContext(AuthContext);
     const { onDeleteCar } = useContext(CarContext);
     const [car, setCar] = useState([]);
     const [isFavourited, setFavourite] = useState(false);
@@ -29,7 +29,7 @@ export const CarDetails = () => {
                 setFavourite(true);
             }
         });
-    }, [carId]);
+    }, [carId, userId]);
 
     let isOwner = false;
     if (userId === car._ownerId) {
@@ -46,7 +46,7 @@ export const CarDetails = () => {
     };
 
     const onFavouriteClick = async () => {
-        const result = await favouriteService.create({ ...car, carId }, auth);
+        await favouriteService.create({ ...car, carId }, auth);
         setFavourite(true);
     };
 
@@ -58,7 +58,7 @@ export const CarDetails = () => {
                         <img
                             className={styles["image"]}
                             src={car.image}
-                            alt="could not laod image"
+                            alt="Could no load iamge"
                         />
                     </div>
 
