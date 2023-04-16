@@ -90,6 +90,10 @@ export const CarDetails = () => {
                                     <strong>Mileage</strong>
                                 </label>
                                 <span>{car.mileage}</span>
+                                <label htmlFor="phoneNumber">
+                                    <strong>phoneNumber</strong>
+                                </label>
+                                <span>{car.phoneNumber}</span>
                                 <label htmlFor="description">
                                     Description:
                                 </label>

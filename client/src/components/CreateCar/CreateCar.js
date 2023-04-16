@@ -15,6 +15,7 @@ export const CreateCar = () => {
             engine: "",
             mileage: "",
             description: "",
+            phoneNumber: "",
         },
         onCreateCarSubmit
     );
@@ -80,6 +81,16 @@ export const CreateCar = () => {
                                     id="mileage"
                                     name="mileage"
                                     value={values.mileage}
+                                    onChange={changeHandler}
+                                />
+                                <label htmlFor="phoneNumber">
+                                    Phone number:
+                                </label>
+                                <input
+                                    type="text"
+                                    id="phoneNumber"
+                                    name="phoneNumber"
+                                    value={values.phoneNumber}
                                     onChange={changeHandler}
                                 />
                             </fieldset>

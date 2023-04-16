@@ -14,6 +14,7 @@ export const Item = ({
     if (carId) {
         id = carId;
     }
+
     return (
         <div className={styles["product"]}>
             <div className={styles["image-box"]}>
@@ -29,7 +30,7 @@ export const Item = ({
                     {brand}-{model}
                 </h2>
                 <h3>${price}</h3>
-                <p>{description}</p>
+                <p>{description.slice(0, 305)}...</p>
                 <Link to={`/catalog/${id}`}>
                     <button type="button" className={styles["details-btn"]}>
                         Details
