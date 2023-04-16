@@ -45,7 +45,7 @@ export const CreateCar = () => {
                                 />
                                 <label htmlFor="price">Price:</label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     id="price"
                                     name="price"
                                     value={values.price}
@@ -61,7 +61,7 @@ export const CreateCar = () => {
                                 />
                                 <label htmlFor="year">Year:</label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     id="year"
                                     name="year"
                                     value={values.year}
@@ -77,7 +77,7 @@ export const CreateCar = () => {
                                 />
                                 <label htmlFor="mileage">Mileage:</label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     id="mileage"
                                     name="mileage"
                                     value={values.mileage}
@@ -87,7 +87,7 @@ export const CreateCar = () => {
                                     Phone number:
                                 </label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     id="phoneNumber"
                                     name="phoneNumber"
                                     value={values.phoneNumber}

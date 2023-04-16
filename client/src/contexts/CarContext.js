@@ -19,6 +19,49 @@ export const CarProvider = ({ children }) => {
     }, []);
 
     const onCreateCarSubmit = async (data) => {
+        if (data["brand"].length < 3) {
+            return window.alert(
+                "Car brand should be atleast 3 characters long"
+            );
+        }
+
+        if (data["model"].length < 3) {
+            return window.alert(
+                "Car model should be atleast 3 characters long"
+            );
+        }
+
+        if (data["price"] <= 0) {
+            return window.alert("Price should be bigger than 0");
+        }
+
+        if (!data["image"].startsWith("http")) {
+            return window.alert(
+                "Image URL should satrt with http:// or https://"
+            );
+        }
+
+        if (data["year"] < 1980) {
+            return window.alert("Year should be bigger than 1980");
+        }
+
+        if (data["engine"].length < 3) {
+            return window.alert("Engine should be atleast 3 characters long");
+        }
+
+        if (data["mileage"] <= 0) {
+            return window.alert("Mileage should be bigger than 0");
+        }
+
+        if (data["phoneNumber"].length !== 10) {
+            return window.alert("Phone number should be 10 digits long");
+        }
+        if (data["description"].length < 30) {
+            return window.alert(
+                "Description should be atleast 30 characters long"
+            );
+        }
+
         const newCar = await carService.create(data, auth);
 
         setCars((state) => {
@@ -35,7 +78,7 @@ export const CarProvider = ({ children }) => {
     };
 
     const onDeleteCar = async (carId) => {
-        const result = await carService.del(carId, auth);
+        await carService.del(carId, auth);
         setCars((state) => state.filter((x) => x._id !== carId));
         navigate("/cars/catalog");
     };

@@ -41,7 +41,7 @@ export const Register = () => {
                                     Confirm password:
                                 </label>
                                 <input
-                                    type="repassword"
+                                    type="password"
                                     id="repassword"
                                     name="repassword"
                                     value={values.repassword}
