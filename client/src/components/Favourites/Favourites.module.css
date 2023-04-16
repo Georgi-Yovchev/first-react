@@ -1,9 +1,5 @@
-.listing-section {
-    background:#FEAD3A;
-    background-image: url("../../../public/generalBackground.png");
-    background-repeat: no-repeat;
-    background-size: contain; 
-    width: 100%;
-    float: left;
-    padding-bottom: 538px;
-  }
+.empty h1 {
+  text-align: center;
+  font-size: 100px;
+  padding-top: 150px;
+}

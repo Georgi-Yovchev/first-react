@@ -17,14 +17,14 @@ export const Favourites = () => {
 
     if (favCars.length > 0) {
         return (
-            <section className={styles["listing-section"]}>
+            <section>
                 <List {...favCars} />
             </section>
         );
     } else {
         return (
-            <section className={styles["listing-section"]}>
-                <h1>There are no rental cars that have been favourited</h1>;
+            <section className={styles["empty"]}>
+                <h1>Your favourites list is empty</h1>;
             </section>
         );
     }

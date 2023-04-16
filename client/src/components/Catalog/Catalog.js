@@ -8,13 +8,13 @@ export const Catalog = () => {
 
     if (cars.length > 0) {
         return (
-            <section className={styles["listing-section"]}>
+            <section>
                 <List {...cars} />
             </section>
         );
     } else {
         return (
-            <section className={styles["listing-section"]}>
+            <section className={styles["empty"]}>
                 <h1>There are no rental cars right now</h1>;
             </section>
         );
