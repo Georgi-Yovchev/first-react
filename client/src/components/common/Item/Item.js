@@ -30,7 +30,11 @@ export const Item = ({
                     {brand}-{model}
                 </h2>
                 <h3>${price}</h3>
-                <p>{description.slice(0, 305)}...</p>
+                <p>
+                    {description.length > 305
+                        ? description.slice(0, 305) + "..."
+                        : description}
+                </p>
                 <Link to={`/catalog/${id}`}>
                     <button type="button" className={styles["details-btn"]}>
                         Details
