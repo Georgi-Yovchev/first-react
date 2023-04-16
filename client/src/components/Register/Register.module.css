@@ -9,14 +9,6 @@
     padding: 50px;
   }
   
-  .register{
-    background:#FEAD3A;
-    background-image: url("../../../public/generalBackground.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  
-  
   
   .register-form form {
     max-width: 300px;
@@ -31,20 +23,7 @@
     text-align: center;
   }
   
-  .register-form input
-  /* input[type="text"],
-  input[type="password"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="number"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  textarea,
-  select  */
-  {
+  .register-form input {
     text-align: left;
     background: rgba(255,255,255,0.1);
     border: none;
@@ -59,11 +38,7 @@
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
   }
-  
 
-  
-
-  
   .register-form button {
     padding: 19px 39px 18px 39px;
     color: #FFF;

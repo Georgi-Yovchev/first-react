@@ -9,15 +9,6 @@
     padding: 50px;
   }
   
-  .login{
-    background:#FEAD3A;
-    background-image: url("../../../public/generalBackground.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  
-  
-  
   .login-form form {
     max-width: 300px;
     margin: 10px auto;
@@ -31,20 +22,7 @@
     text-align: center;
   }
   
-  .login-form input
-  /* input[type="text"],
-  input[type="password"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="number"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  textarea,
-  select  */
-  {
+  .login-form input  {
     background: rgba(255,255,255,0.1);
     border: none;
     font-size: 16px;
@@ -58,17 +36,6 @@
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
   }
-  
-  /* input[type="radio"],
-  input[type="checkbox"] {
-    margin: 0 4px 8px 0;
-  } */
-  
-  /* select {
-    padding: 6px;
-    height: 32px;
-    border-radius: 2px;
-  } */
   
   .login-form button {
     padding: 19px 39px 18px 39px;
