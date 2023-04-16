@@ -18,6 +18,7 @@ export const EditCar = () => {
             engine: "",
             mileage: "",
             description: "",
+            phoneNumber: "",
         },
         onEditCarSubmit,
         carId
@@ -90,6 +91,16 @@ export const EditCar = () => {
                                     id="mileage"
                                     name="mileage"
                                     value={values.mileage}
+                                    onChange={changeHandler}
+                                />
+                                <label htmlFor="phoneNumber">
+                                    Phone number:
+                                </label>
+                                <input
+                                    type="number"
+                                    id="phoneNumber"
+                                    name="phoneNumber"
+                                    value={values.phoneNumber}
                                     onChange={changeHandler}
                                 />
                             </fieldset>

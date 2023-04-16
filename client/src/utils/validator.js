@@ -12,7 +12,7 @@ export const carForm = (data) => {
     }
 
     if (!data["image"].startsWith("http")) {
-        throw new Error("Image URL should satrt with http:// or https://");
+        throw new Error("Image URL should start with 'http'");
     }
 
     if (data["year"] < 1980) {
