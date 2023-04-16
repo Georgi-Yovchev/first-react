@@ -1,4 +1,4 @@
-import { Item } from "../CatalogItem/Item";
+import { Item } from "../Item/Item";
 
 export const List = (props) => {
     const cars = Object.values(props);
