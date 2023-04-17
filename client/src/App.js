@@ -18,8 +18,8 @@ import { ErrorMessage } from "./components/ErrorMessage/ErrorMessage";
 function App() {
     return (
         <Router>
-            <AuthProvider>
-                <ErrorProvider>
+            <ErrorProvider>
+                <AuthProvider>
                     <CarProvider>
                         <Header />
 
@@ -50,8 +50,8 @@ function App() {
 
                         <Footer />
                     </CarProvider>
-                </ErrorProvider>
-            </AuthProvider>
+                </AuthProvider>
+            </ErrorProvider>
         </Router>
     );
 }

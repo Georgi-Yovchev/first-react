@@ -1,12 +1,14 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import * as AuthService from "../services/AuthService";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import * as validator from "../utils/validator";
+import { ErrorContext } from "../contexts/ErrorContext";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+    const { setErr } = useContext(ErrorContext);
     const [auth, setAuth] = useLocalStorage("auth", {});
     const navigate = useNavigate();
 
@@ -21,7 +23,7 @@ export const AuthProvider = ({ children }) => {
         try {
             validator.registerFornm(data);
         } catch (error) {
-            return window.alert(error.message);
+            return setErr(error.message);
         }
 
         try {

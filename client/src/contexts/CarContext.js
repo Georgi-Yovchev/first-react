@@ -40,7 +40,7 @@ export const CarProvider = ({ children }) => {
         try {
             validator.carForm(data);
         } catch (error) {
-            return window.alert(error.message);
+            return setErr(error.message);
         }
 
         const updatedCar = await carService.update(carId, data, auth);

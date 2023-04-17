@@ -1,5 +1,5 @@
 import styles from "./ErrorMessage.module.css";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 import { ErrorContext } from "../../contexts/ErrorContext";
 
@@ -10,7 +10,7 @@ export const ErrorMessage = () => {
         setTimeout(() => {
             setErr("");
             console.log("hmm");
-        }, 5000);
+        }, 4000);
     }
 
     return (

@@ -61,7 +61,7 @@ export const EditCar = () => {
                                     value={values.price}
                                     onChange={changeHandler}
                                 />
-                                <label htmlFor="image">Image:</label>
+                                <label htmlFor="image">Image url:</label>
                                 <input
                                     type="text"
                                     id="image"

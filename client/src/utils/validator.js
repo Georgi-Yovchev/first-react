@@ -37,7 +37,7 @@ export const carForm = (data) => {
 
 export const registerFornm = (data) => {
     if (data.password !== data.repassword) {
-        throw new Error("passwords missmatch");
+        throw new Error("Passwords do not match");
     }
 
     if (data.username.length < 5) {
