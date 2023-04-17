@@ -74,4 +74,4 @@ The application uses CSS for styling, with styles defined in separate CSS files 
 
 # Validation
 
-The application uses `src/utils/validator` to validate input from the user.
+The application uses `src/utils/validator.js` to validate input from the user.
