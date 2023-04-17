@@ -7,8 +7,8 @@ export const ErrorMessage = () => {
     const { err, setErr } = useContext(ErrorContext);
 
     return (
-        <div className={err ? styles["err"] : styles["hidden"]}>
-            This is error
+        <div className={err ? styles["error-box"] : styles["hidden"]}>
+            {err}
         </div>
     );
 };

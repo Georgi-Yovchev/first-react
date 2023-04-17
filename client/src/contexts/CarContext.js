@@ -25,7 +25,7 @@ export const CarProvider = ({ children }) => {
         try {
             validator.carForm(data);
         } catch (error) {
-            return window.alert(error.message);
+            return setErr(error.message);
         }
 
         const newCar = await carService.create(data, auth);
