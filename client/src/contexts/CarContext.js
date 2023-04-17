@@ -5,11 +5,13 @@ import * as validator from "../utils/validator";
 
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { ErrorContext } from "../contexts/ErrorContext";
 
 export const CarContext = createContext();
 
 export const CarProvider = ({ children }) => {
     const { auth } = useContext(AuthContext);
+    const { setErr } = useContext(ErrorContext);
     const [cars, setCars] = useState([]);
     const navigate = useNavigate();
 

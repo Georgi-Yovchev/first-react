@@ -1,5 +1,6 @@
 import { AuthProvider } from "./contexts/AuthContext";
 import { CarProvider } from "./contexts/CarContext";
+import { ErrorProvider } from "./contexts/ErrorContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CreateCar } from "./components/CreateCar/CreateCar";
 import { Header } from "./components/Header/Header";
@@ -12,39 +13,44 @@ import { Logout } from "./components/Logout/Logout";
 import { EditCar } from "./components/EditCar/EditCar";
 import { Catalog } from "./components/Catalog/Catalog";
 import { Favourites } from "./components/Favourites/Favourites";
-import { useState } from "react";
-import styles from "./Err.module.css";
+import { ErrorMessage } from "./components/ErrorMessage/ErrorMessage";
 
 function App() {
-    const [err, setErr] = useState("1");
     return (
         <Router>
             <AuthProvider>
-                <CarProvider>
-                    <Header />
-                    <div className={err ? styles["err"] : styles["hidden"]}>
-                        This is error
-                    </div>
-                    <Routes>
-                        <Route path="/cars/create" element={<CreateCar />} />
-                        <Route path="/" element={<Home />} />
-                        <Route path="/cars/catalog" element={<Catalog />} />
-                        <Route path="/favourites" element={<Favourites />} />
-                        <Route
-                            path="/catalog/:carId"
-                            element={<CarDetails />}
-                        />
-                        <Route
-                            path="/catalog/:carId/edit"
-                            element={<EditCar />}
-                        />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/logout" element={<Logout />} />
-                    </Routes>
+                <ErrorProvider>
+                    <CarProvider>
+                        <Header />
 
-                    <Footer />
-                </CarProvider>
+                        <ErrorMessage />
+                        <Routes>
+                            <Route
+                                path="/cars/create"
+                                element={<CreateCar />}
+                            />
+                            <Route path="/" element={<Home />} />
+                            <Route path="/cars/catalog" element={<Catalog />} />
+                            <Route
+                                path="/favourites"
+                                element={<Favourites />}
+                            />
+                            <Route
+                                path="/catalog/:carId"
+                                element={<CarDetails />}
+                            />
+                            <Route
+                                path="/catalog/:carId/edit"
+                                element={<EditCar />}
+                            />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<Register />} />
+                            <Route path="/logout" element={<Logout />} />
+                        </Routes>
+
+                        <Footer />
+                    </CarProvider>
+                </ErrorProvider>
             </AuthProvider>
         </Router>
     );

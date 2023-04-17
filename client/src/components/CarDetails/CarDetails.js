@@ -1,9 +1,8 @@
 import styles from "./CarDetails.module.css";
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import * as carService from "../../services/carService";
 import * as favouriteService from "../../services/favouriteService";
-import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { CarContext } from "../../contexts/CarContext";
 
