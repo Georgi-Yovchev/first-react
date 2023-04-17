@@ -12,14 +12,19 @@ import { Logout } from "./components/Logout/Logout";
 import { EditCar } from "./components/EditCar/EditCar";
 import { Catalog } from "./components/Catalog/Catalog";
 import { Favourites } from "./components/Favourites/Favourites";
+import { useState } from "react";
+import styles from "./Err.module.css";
 
 function App() {
+    const [err, setErr] = useState("1");
     return (
         <Router>
             <AuthProvider>
                 <CarProvider>
                     <Header />
-
+                    <div className={err ? styles["err"] : styles["hidden"]}>
+                        This is error
+                    </div>
                     <Routes>
                         <Route path="/cars/create" element={<CreateCar />} />
                         <Route path="/" element={<Home />} />
