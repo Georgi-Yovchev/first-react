@@ -34,3 +34,17 @@ export const carForm = (data) => {
         throw new Error("Description should be atleast 30 characters long");
     }
 };
+
+export const registerFornm = (data) => {
+    if (data.password !== data.repassword) {
+        throw new Error("passwords missmatch");
+    }
+
+    if (data.username.length < 5) {
+        throw new Error("Your username should be atleast 5 characters long");
+    }
+
+    if (data.password.length < 4) {
+        throw new Error("Your password should be atleast 4 characters long");
+    }
+};

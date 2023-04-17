@@ -2,6 +2,7 @@ import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import * as AuthService from "../services/AuthService";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import * as validator from "../utils/validator";
 
 export const AuthContext = createContext();
 
@@ -16,27 +17,16 @@ export const AuthProvider = ({ children }) => {
         navigate("/");
     };
 
-    const onRegisterSubmit = async (values) => {
-        const { username, password, repassword } = values;
-        if (password !== repassword) {
-            return window.alert("passwords missmatch");
-        }
-
-        if (username.length < 5) {
-            return window.alert(
-                "Your username should be atleast 5 characters long"
-            );
-        }
-
-        if (password.length < 4) {
-            return window.alert(
-                "Your password should be atleast 4 characters long"
-            );
+    const onRegisterSubmit = async (data) => {
+        try {
+            validator.registerFornm(data);
+        } catch (error) {
+            return window.alert(error.message);
         }
 
         try {
-            await AuthService.register(username, password);
-            onLoginSubmit({ username, password });
+            await AuthService.register(data.username, data.password);
+            onLoginSubmit({ username: data.username, password: data.password });
         } catch (error) {
             return console.log("There is a problem");
         }
