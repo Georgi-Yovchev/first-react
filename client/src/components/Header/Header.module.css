@@ -43,3 +43,28 @@
   transform: scale(1.2, 1.2);
   text-shadow: 0 0 10px #ccc;
 }
+
+.one ul li button {
+  background-color: transparent; 
+  border: none;
+  width:100px
+}
+
+.one ul li button:hover {
+  background: #222;
+  color: #ccc;
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  text-shadow: 0 0 10px #ccc;
+}
+
+.one ul li button {
+  color: #222;
+  text-decoration: none;
+  text-transform: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}

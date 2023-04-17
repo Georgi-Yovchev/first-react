@@ -9,7 +9,6 @@ import { Footer } from "./components/Footer/Footer";
 import { Register } from "./components/Register/Register";
 import { Login } from "./components/Login/Login";
 import { CarDetails } from "./components/CarDetails/CarDetails";
-import { Logout } from "./components/Logout/Logout";
 import { EditCar } from "./components/EditCar/EditCar";
 import { Catalog } from "./components/Catalog/Catalog";
 import { Favourites } from "./components/Favourites/Favourites";
@@ -45,7 +44,6 @@ function App() {
                             />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
-                            <Route path="/logout" element={<Logout />} />
                         </Routes>
 
                         <Footer />

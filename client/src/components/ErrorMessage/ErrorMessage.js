@@ -9,7 +9,6 @@ export const ErrorMessage = () => {
     if (err) {
         setTimeout(() => {
             setErr("");
-            console.log("hmm");
         }, 4000);
     }
 

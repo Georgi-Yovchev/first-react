@@ -4,7 +4,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 
 export const Header = () => {
-    const { isAuthenticated } = useContext(AuthContext);
+    const { isAuthenticated, onLogout } = useContext(AuthContext);
+
+    const onLogoutClick = () => {
+        onLogout();
+    };
+
     return (
         <nav className={styles["one"]}>
             <ul>
@@ -24,7 +29,9 @@ export const Header = () => {
                             <Link to="/favourites">Favourites</Link>
                         </li>
                         <li>
-                            <Link to="/logout">Logout</Link>
+                            <Link to="/" onClick={onLogoutClick}>
+                                Logout
+                            </Link>
                         </li>
                     </>
                 )}
