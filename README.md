@@ -51,7 +51,7 @@ The web application uses several components to create the user interface.
 -   `App`: The root component of the application, which renders all the other components.
 -   `Header`: Renders the navigation links.
 -   `Footer`: Renders a sentance.
--   `Home`: Renders the hom page for the application.
+-   `Home`: Renders the home page for the application.
 -   `Register`: Renders the register form.
 -   `Login`: Renders the login form.
 -   `Catalog`: Renders all items retrieved from the server with basic information about them.
